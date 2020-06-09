@@ -1,0 +1,589 @@
+/* noto-sans-regular - latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'),
+       url('../fonts/noto-sans/noto-sans-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-sans/noto-sans-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* noto-serif-regular - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif'), local('NotoSerif'),
+       url('../fonts/noto-serif/noto-serif-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-serif/noto-serif-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: rgba(234,234,234,1);
+  background: rgba(51,54,59,1);
+}
+
+::selection {
+  color: rgba(234,234,234,1);
+  background: rgba(51,54,59,1);
+}
+
+body {
+   background-color: rgba(234,234,234,1);
+   color: rgba(51,54,59,1);
+   font-family: 'Noto Serif';
+   -webkit-user-select: none; /* Safari 3.1+ */
+   -moz-user-select: none; /* Firefox 2+ */
+   -ms-user-select: none; /* IE 10+ */
+   user-select: none; /* Standard syntax */
+ }
+
+@keyframes on_move {
+  from {
+     margin-left: -100%;
+    }
+  to {
+    opacity: 1;
+    margin-right: 100%;
+  }
+}
+
+ /* The sidebar menu */
+.sidenav {
+	float: left;
+  margin: 0;
+  height: 100%;
+  width: 300px;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(51,54,59,1);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px;
+  border-left: 5px solid black;
+  animation: on_move 1s;
+  }
+
+.Mypic {
+  background-image: url('../images/MyPic.jpg');
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  border: 2px solid rgba(234,234,234,1);
+  border-radius: 50%;
+  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#name {
+  font-weight: normal;
+  text-align: center;
+  color: rgba(234,234,234,1);
+  cursor: default;
+  border-top: 2px solid rgba(234,234,234,1);
+  border-bottom: 2px solid rgba(234,234,234,1);
+  padding: 5px;
+}
+
+#address {
+  color: rgba(234,234,234,1);
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border-top: 2px solid rgba(234,234,234,1);
+  border-bottom: 2px solid rgba(234,234,234,1);
+  padding: 5px;
+}
+
+#address a {
+  color: rgba(234,234,234,1);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+#address a:hover {
+  border-bottom: 1px solid rgba(234,234,234,1);
+}
+
+/* The navigation menu links */
+.sidenav button {
+  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 23px;
+  text-align: center;
+  color: rgba(234,234,234,1);
+  margin-top: 12px;
+  width: 270px;
+  transition: all 0.5s;
+  background-color: rgba(126,188,89,1);
+  border-radius: 7px;
+}
+
+.sidenav button:hover {
+  cursor: pointer;
+  background-color: rgba(125, 188, 89, 0.5);
+}
+
+.sidenav button span {
+  color: rgba(234,234,234,1);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.sidenav button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.6s;
+
+}
+
+.sidenav button:hover span {
+  padding-right: 35px;
+}
+
+.sidenav button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.sidenav button:active {
+  background-color: rgb(191, 54, 54);
+}
+
+
+.sidenav button.active {
+  background-color: rgba(54,140,191,0.7);
+}
+
+#main {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 300px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  text-align: center;
+}
+
+#wtP {
+  font-weight: bolder;
+  font-size: 50px;
+  margin-top: 200px;
+}
+
+#wtP:hover {
+  animation: changeColor 3s;
+}
+
+
+@keyframes changeColor {
+  from {
+    color: rgba(51,54,59,1);
+  }
+  50% {
+    color: rgba(126,188,89,1);
+  }
+  to {
+    color: rgba(54,140,191,1);
+  }
+}
+
+#welcome {
+  color: rgba(234,234,234,1);
+  padding: 5px;
+}
+
+#mainPage tr th:nth-child(2) {
+  background-color: rgba(126,188,89,1);
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.tabcontent {
+  display: none;
+  margin-left: 300px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  animation: fadeEffect 1s;
+}
+
+#close {
+  color: rgba(234,234,234,1);
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+#close:hover {
+  background-color: transparent;
+  color: rgba(255, 0, 0, 1);
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+#close.active {
+  outline: none;
+  border: none;
+}
+
+@keyframes open_main {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.tabcontent .mainTable {
+  cursor: default;
+  border-collapse: collapse;
+  animation: open_main 1s;
+}
+
+.tabcontent .mainTable tr th:nth-child(1) {
+  text-align: center;
+  background-color: rgba(51,54,59,0.9);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.tabcontent .mainTable tr th:nth-child(2) {
+  padding: 5px;
+  width: 100%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(54,140,191,0.8);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 30px;
+}
+
+@keyframes open_info {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 98%;
+    opacity: 1;
+  }
+}
+
+.info {
+  width: 98%;
+  height: auto;
+  background: rgba(51,54,59,0.1);
+  margin-top: 10px;
+  padding-top: 1px;
+  padding-left: 8px;
+  border-left: 8px solid rgba(51,54,59,0.9);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  animation: open_info 1s;
+}
+
+.info div h3::before {
+  content: '\2022';
+}
+
+.info div h3 {
+  text-transform: uppercase;
+  margin-top: 10px;
+  border-bottom: 2px solid rgba(51,54,59,0.8);
+  width: 99%;
+  animation: fadeEffect 1s;
+  
+}
+
+.info p {
+  font-family: 'Noto Sans';
+  text-align: justify;
+  margin-top: -10px;
+  margin-left: 10px;
+  margin-right: 15px;
+  animation: fadeEffect 1s;
+}
+
+.loadT {
+  margin-top: -12px;
+  margin-left: 8px;
+  border-collapse: collapse;
+  cursor: default;
+}
+
+.loadT  th {
+  padding: 5px;
+}
+
+.loadT  th:nth-child(1) {
+  border-right: 3px solid rgba(54,140,191,1);
+}
+
+@keyframes loadOn {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 98%;
+    background-color: rgba(54,140,191,0.7);
+  }
+}
+
+.loadT .ll {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll div {
+  width: 98%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(54,140,191,0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn 2.5s;
+}
+
+/* fadeEffect */
+
+div .aStyle:link, .aStyle:visited {
+  text-decoration: none;
+  color: rgb(51,54,59);
+}
+
+div .aStyle:hover {
+  text-decoration: underline;
+  color: rgba(54,140,191,1);
+}
+
+div .aStyle:active {
+  text-decoration: underline;
+  color: red;
+}
+
+.info div h3 span::before {
+  content: '\002D';
+}
+
+.info div h3 span {
+  width: max-content;
+  font-size: 15px;
+  text-transform: capitalize;
+  animation: fadeEffect 1s;
+  color: rgb(84, 85, 87);
+}
+
+.info div #h3-2::before {
+  content: '\2043';
+}
+
+.info div #h3-2 {
+  text-transform: capitalize;
+  border-bottom: none;
+  margin-top: -8px;
+  margin-left: 3%;
+}
+
+.weD {
+  margin-top: -10px;
+  margin-left: 50px;
+}
+
+
+@keyframes loadOn2 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 80%;
+    background-color: rgba(191, 59, 54, 0.7);
+  }
+}
+
+.loadT .ll2 {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll2 div {
+  width: 80%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(191, 59, 54, 0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn2 2.5s;
+}
+
+@keyframes loadOn3 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70%;
+    background-color: rgba(54, 159, 191, 0.7);
+  }
+}
+
+.loadT .ll3 {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll3 div {
+  width: 70%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(54, 159, 191, 0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn3 2.5s;
+}
+
+@keyframes loadOn4 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70%;
+    background-color: rgba(191, 143, 54, 0.7);
+  }
+}
+
+.loadT .ll4 {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll4 div {
+  width: 70%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(191, 143, 54, 0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn4 2.5s;
+}
+
+@keyframes loadOn5 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 80%;
+    background-color: rgba(51,54,59,0.7);
+  }
+}
+
+.loadT .ll5 {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll5 div {
+  width: 80%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(51,54,59,0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn5 2.5s;
+}
+
+
+@keyframes loadOn6 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 60%;
+    background-color: rgba(188, 89, 147, 0.7);
+  }
+}
+
+.loadT .ll6 {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll6 div {
+  width: 60%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(188, 89, 147, 0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn6 2.5s;
+}
+
+@keyframes loadOn7 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 80%;
+    background-color: rgba(89, 107, 188, 0.7);
+  }
+}
+
+.loadT .ll7 {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll7 div {
+  width: 80%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(89, 107, 188, 0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn7 2.5s;
+}
+
+@keyframes loadOn8 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 90%;
+    background-color: rgba(126,188,89,0.7);
+  }
+}
+
+.loadT .ll8 {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .ll8 div {
+  width: 90%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(126,188,89,0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadOn8 2.5s;
+}
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
