@@ -340,7 +340,7 @@ body {
   border-right: 3px solid rgba(54,140,191,1);
 }
 
-@keyframes loadOn {
+@keyframes loadT {
   from {
     width: 0px;
   }
@@ -361,7 +361,7 @@ body {
   background-color: rgba(54,140,191,0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn 2.5s;
+  animation: loadT 2.5s;
 }
 
 /* fadeEffect */
@@ -409,8 +409,31 @@ div .aStyle:active {
   margin-left: 50px;
 }
 
+@keyframes loadHtml {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 98%;
+    background-color: rgba(54,140,191,0.7);
+  }
+}
 
-@keyframes loadOn2 {
+.loadT .html {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .html div {
+  width: 98%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(54,140,191,0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadHtml 2.5s;
+}
+
+@keyframes loadCss {
   from {
     width: 0px;
   }
@@ -420,45 +443,69 @@ div .aStyle:active {
   }
 }
 
-.loadT .ll2 {
+.loadT .css {
   text-align: left;
   width: 98%;
 }
 
-.loadT .ll2 div {
+.loadT .css div {
   width: 80%;
   color: rgba(234,234,234,1);
   background-color: rgba(191, 59, 54, 0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn2 2.5s;
+  animation: loadCss 2.5s;
 }
 
-@keyframes loadOn3 {
+@keyframes loadCpp {
   from {
     width: 0px;
   }
   to {
     width: 70%;
-    background-color: rgba(54, 159, 191, 0.7);
+    background-color: rgba(54, 91, 191, 0.7);
   }
 }
 
-.loadT .ll3 {
+.loadT .cpp {
   text-align: left;
   width: 98%;
 }
 
-.loadT .ll3 div {
+.loadT .cpp div {
   width: 70%;
   color: rgba(234,234,234,1);
-  background-color: rgba(54, 159, 191, 0.7);
+  background-color: rgba(54, 91, 191, 0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn3 2.5s;
+  animation: loadCpp 2.5s;
 }
 
-@keyframes loadOn4 {
+@keyframes loadPython {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70%;
+    background-color: rgba(147, 180, 0, 0.7);
+  }
+}
+
+.loadT .python {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .python div {
+  width: 70%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(147, 180, 0, 0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadPython 2.5s;
+}
+
+@keyframes loadPhp {
   from {
     width: 0px;
   }
@@ -468,21 +515,21 @@ div .aStyle:active {
   }
 }
 
-.loadT .ll4 {
+.loadT .php {
   text-align: left;
   width: 98%;
 }
 
-.loadT .ll4 div {
+.loadT .php div {
   width: 60%;
   color: rgba(234,234,234,1);
   background-color: rgba(191, 143, 54, 0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn4 2.5s;
+  animation: loadPhp 2.5s;
 }
 
-@keyframes loadOn5 {
+@keyframes loadJs {
   from {
     width: 0px;
   }
@@ -492,91 +539,115 @@ div .aStyle:active {
   }
 }
 
-.loadT .ll5 {
+.loadT .js {
   text-align: left;
   width: 98%;
 }
 
-.loadT .ll5 div {
+.loadT .js div {
   width: 80%;
   color: rgba(234,234,234,1);
   background-color: rgba(51,54,59,0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn5 2.5s;
+  animation: loadJs 2.5s;
 }
 
 
-@keyframes loadOn6 {
+@keyframes loadMysql {
   from {
     width: 0px;
   }
   to {
-    width: 60%;
+    width: 70%;
     background-color: rgba(188, 89, 147, 0.7);
   }
 }
 
-.loadT .ll6 {
+.loadT .mysql {
   text-align: left;
   width: 98%;
 }
 
-.loadT .ll6 div {
-  width: 60%;
+.loadT .mysql div {
+  width: 70%;
   color: rgba(234,234,234,1);
   background-color: rgba(188, 89, 147, 0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn6 2.5s;
+  animation: loadMysql 2.5s;
 }
 
-@keyframes loadOn7 {
+@keyframes loadBS {
   from {
     width: 0px;
   }
   to {
-    width: 80%;
+    width: 70%;
     background-color: rgba(89, 107, 188, 0.7);
   }
 }
 
-.loadT .ll7 {
+.loadT .bootstrap {
   text-align: left;
   width: 98%;
 }
 
-.loadT .ll7 div {
-  width: 80%;
+.loadT .bootstrap div {
+  width: 70%;
   color: rgba(234,234,234,1);
   background-color: rgba(89, 107, 188, 0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn7 2.5s;
+  animation: loadBS 2.5s;
 }
 
-@keyframes loadOn8 {
+@keyframes loadMD {
   from {
     width: 0px;
   }
   to {
     width: 90%;
-    background-color: rgba(126,188,89,0.7);
+    background-color: rgba(180, 0, 135, 0.7);
   }
 }
 
-.loadT .ll8 {
+.loadT .materialize {
   text-align: left;
   width: 98%;
 }
 
-.loadT .ll8 div {
+.loadT .materialize div {
   width: 90%;
   color: rgba(234,234,234,1);
-  background-color: rgba(126,188,89,0.7);
+  background-color: rgba(180, 0, 135, 0.7);
   border-radius: 2px 20px 20px 2px;
   padding-left: 5px;
-  animation: loadOn8 2.5s;
+  animation: loadMD 2.5s;
+}
+
+@keyframes loadGit {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 60%;
+    background-color: rgba(94, 153, 60, 0.7);
+  }
+}
+
+.loadT .git {
+  text-align: left;
+  width: 98%;
+}
+
+.loadT .git div {
+  width: 60%;
+  color: rgba(234,234,234,1);
+  background-color: rgba(94, 153, 60, 0.7);
+  border-radius: 2px 20px 20px 2px;
+  padding-left: 5px;
+  animation: loadGit 2.5s;
 }
 
   @media screen and (max-height: 450px) {
